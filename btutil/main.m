@@ -42,9 +42,9 @@ int main(int argc, const char * argv[])
                 
             }
         } else if ([task isEqualToString:@"connect"] && argc == 3) {
-            [BTDevice connectAddress:[arguments objectAtIndex:2]];
+            return [BTDevice connectAddress:[arguments objectAtIndex:2]];
         } else if ([task isEqualToString:@"disconnect"] && argc == 3) {
-            [BTDevice disconnectAddress:[arguments objectAtIndex:2]];
+            return [BTDevice disconnectAddress:[arguments objectAtIndex:2]];
         } else {
             printUsage(argv[0]);
         }
