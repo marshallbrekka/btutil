@@ -2,9 +2,6 @@
 //  main.m
 //  btutil
 //
-//  Created by Marshall Brekka on 12/10/12.
-//  Copyright (c) 2012 Marshall Brekka. All rights reserved.
-//
 
 #import <Foundation/Foundation.h>
 #import <IOBluetooth/IOBluetooth.h>

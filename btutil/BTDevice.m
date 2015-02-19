@@ -2,9 +2,6 @@
 //  BTDevice.m
 //  btutil
 //
-//  Created by Marshall Brekka on 12/11/12.
-//  Copyright (c) 2012 Marshall Brekka. All rights reserved.
-//
 
 #import "BTDevice.h"
 
