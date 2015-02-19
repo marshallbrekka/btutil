@@ -6,9 +6,10 @@
 #import <Foundation/Foundation.h>
 #import <IOBluetooth/IOBluetooth.h>
 #import "BTDevice.h"
+#import "BTBus.h"
 
 void printUsage(const char * binName) {
-    printf("Usage: %s [list [<address>]] [connect|disconnect <address>]\n", binName);
+    printf("Usage: %s [list [<address>]] [connect|disconnect <address>] [on|off|status]\n", binName);
 }
 
 int main(int argc, const char * argv[])
@@ -42,6 +43,13 @@ int main(int argc, const char * argv[])
             return [BTDevice connectAddress:[arguments objectAtIndex:2]];
         } else if ([task isEqualToString:@"disconnect"] && argc == 3) {
             return [BTDevice disconnectAddress:[arguments objectAtIndex:2]];
+        } else if ([task isEqualToString:@"on"] && argc == 2) {
+            return [BTBus on];
+        } else if ([task isEqualToString:@"off"] && argc == 2) {
+            return [BTBus off];
+        } else if ([task isEqualToString:@"status"] && argc == 2) {
+            [BTBus status];
+            return 0;
         } else {
             printUsage(argv[0]);
         }
