@@ -32,13 +32,11 @@ int SetPowerState(int state) {
 
 @implementation BTBus
 + (int) on {
-    SetPowerState(1);
-    return 0;
+    return SetPowerState(1);
 }
 
 + (int) off {
-    SetPowerState(0);
-    return 0;
+    return SetPowerState(0);
 }
 
 + (void) status {
